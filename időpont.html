@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynotuning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .left {
+            width: 45%;
+        }
+        .right {
+            width: 45%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .required:after {
+            content: "*";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <h2>Üzletünk adatai</h2>
+        <table>
+            <tr>
+                <th>Telephely</th>
+                <td>2840, Oroszlány, Mindszenti út 21</td>
+            </tr>
+            <tr>
+                <th>Telefonszám</th>
+                <td>06706471290</td>
+            </tr>
+            <tr>
+                <th>Email cím</th>
+                <td>info@dynotuning.hu</td>
+            </tr>
+            <tr>
+                <th>Nyitvatartás</th>
+                <td>
+                    Hétfő - Péntek: 9:00 - 18:00<br>
+                    Szombat: 10:00 - 14:00<br>
+                    Vasárnap: Zárva
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="right">
+        <h2>Kapcsolatfelvétel</h2>
+        <form action="thanks.html" method="post">
+            <div class="form-group">
+                <label for="name">Név<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email cím<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefonszám<span class="required">*</span></label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Üzenet</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button type="submit">Elküld</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
